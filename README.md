@@ -10,14 +10,14 @@ Pietto, M. L., Giovannetti, F., Segretin, M. S., Rueda, R., Kamienkowski, J. E.,
 # Data
 Data is organized in two structures, one (DATA) containing the stimulus and response-locked activity with Event-Related Potentials (ERP) and Event-Related Spectral Perturbation (ERSP) each, and one (INFO) containing the ID of subjects, the ID of the group of each subject, and the segments times of stimulus and response-locked activity.
 
-Name 	                                                    |Size 	    Bytes 	Class 	Description
-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------
-DATA                                                      |1X1       1713152 struct  Stimulus-locked: activity anchored to Go and NoGo stimuli. Response-locked: activity anchored to Correct and Error responses.
-DATA.stimulus_locked                                      |1x1       861920  struct  ERP: Event-Related Potential. ERSP: Event-Related Spectral Perturbation (Theta frequency band).
-DATA.response_locked                                      |1x1       850880  struct  ERP: Event-Related Potential. ERSP: Event-Related Spectral Perturbation (Theta frequency band).
-DATA.stimulus_locked.ERP and .ERSP                        |1x2       430784  cell    Cell n1: pre-intervention session. Cell n2: post-intervention session.
-DATA.response_locked.ERP and .ERSP                        |1x2       425264  cell    Cell n1: pre-intervention session. Cell n2: post-intervention session.
-DATA.stimulus_locked.ERP{1}, .ERP{2}, ERSP{1} and ERSP{2} |115x78x3  215280  double  Samples, Subjects, correct trials: 1- Go; 2- NoGo; 3- NoGo minus Go.
-DATA.response_locked.ERP{1}, .ERP{2}, ERSP{1} and ERSP{2} |115x77x3  212520  double  Samples, Subjects, responses: 1- Correct Go; 2- Error NoGo; 3- Error minus Correct.
+Name 	                                                    |Size 	    Bytes |	Class |	Description|
+----------------------------------------------------------|-----------------|-------|------------|---------------------------------------------------------------------
+DATA                                                      |1X1       1713152| struct|  Stimulus-locked: activity anchored to Go and NoGo stimuli. Response-locked: activity anchored to Correct and Error responses.|
+DATA.stimulus_locked                                      |1x1       861920 | struct|  ERP: Event-Related Potential. ERSP: Event-Related Spectral Perturbation (Theta frequency band).|
+DATA.response_locked                                      |1x1       850880 | struct|  ERP: Event-Related Potential. ERSP: Event-Related Spectral Perturbation (Theta frequency band).|
+DATA.stimulus_locked.ERP and .ERSP                        |1x2       430784 | cell  |  Cell n1: pre-intervention session. Cell n2: post-intervention session.|
+DATA.response_locked.ERP and .ERSP                        |1x2       425264 | cell  |  Cell n1: pre-intervention session. Cell n2: post-intervention session.|
+DATA.stimulus_locked.ERP{1}, .ERP{2}, ERSP{1} and ERSP{2} |115x78x3  215280 | double|  Samples, Subjects, correct trials: 1- Go; 2- NoGo; 3- NoGo minus Go.|
+DATA.response_locked.ERP{1}, .ERP{2}, ERSP{1} and ERSP{2} |115x77x3  212520 | double|  Samples, Subjects, responses: 1- Correct Go; 2- Error NoGo; 3- Error minus Correct.|
 
 Stimulus-locked data were segmented into epochs of 200 ms before to 800 ms after target onset (in trials associated with correct responses); response-locked data were segmented into epochs of 400 ms before to 600 ms after the press of the button (in trials associated with correct and error responses). Baseline activity was subtracted from each epoch using the average activity in the intervals [−200, 0] ms and [−400, -50] ms for stimulus-locked and response-locked waveforms, respectively.  Stimulus-locked waveforms were re-referenced offline to the algebraic average of P7/P8 channels (the closest electrodes to the right/left mastoids) and response-locked signals were re-referenced to a pseudo-average reference including channels O1, O2, T7, T8, AF3, AF4. Finally, the average activity was calculated over a frontal ROI (F3/F4 electrodes). For further details on data collection and preprocessing please refer to Pietto et al (JCE, 2021).
