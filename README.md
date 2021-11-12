@@ -11,7 +11,7 @@ Pietto, M. L., Giovannetti, F., Segretin, M. S., Rueda, R., Kamienkowski, J. E.,
 Data is organized in two structures, one (DATA) containing the stimulus and response-locked activity with Event-Related Potentials (ERP) and Event-Related Spectral Perturbation (ERSP) each, and one (INFO) containing the ID of subjects, the ID of the group of each subject, and the segments times of stimulus and response-locked activity.
 
 Name 	                                                    |Size 	    Bytes 	Class 	Description
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------|------------------------------------------------------------------------------------------------------------
 DATA                                                      |1X1       1713152 struct  Stimulus-locked: activity anchored to Go and NoGo stimuli. Response-locked: activity anchored to Correct and Error responses.
 DATA.stimulus_locked                                      |1x1       861920  struct  ERP: Event-Related Potential. ERSP: Event-Related Spectral Perturbation (Theta frequency band).
 DATA.response_locked                                      |1x1       850880  struct  ERP: Event-Related Potential. ERSP: Event-Related Spectral Perturbation (Theta frequency band).
